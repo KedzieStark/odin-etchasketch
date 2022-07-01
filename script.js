@@ -1,5 +1,6 @@
 const container = document.querySelector('.container');
-const resetButton = document.querySelector('.resetButton');
+const clearGridBtn = document.querySelector('.clearGridBtn');
+const resizeGridBtn = document.querySelector('.resizeGridBtn');
 
 // Create square grid
 
@@ -19,11 +20,16 @@ squares.forEach((square) => {
     })
 })
 
-// Reset
-function resetGrid() {
+// Clear grid
+function clearGrid() {
     squares.forEach((square) => {
-            square.classList.remove('active');
+        square.classList.remove('active');
     })
 }
 
-resetButton.addEventListener('click', resetGrid);
+function gridResize() {
+    let gridSize = prompt("Enter a grid size","16");
+    container.replaceChildren();
+}
+
+clearGridBtn.addEventListener('click', clearGrid);
