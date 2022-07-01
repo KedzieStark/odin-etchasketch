@@ -1,4 +1,5 @@
 const container = document.querySelector('.container');
+const resetButton = document.querySelector('.resetButton');
 
 // Create square grid
 
@@ -18,3 +19,11 @@ squares.forEach((square) => {
     })
 })
 
+// Reset
+function resetGrid() {
+    squares.forEach((square) => {
+            square.classList.remove('active');
+    })
+}
+
+resetButton.addEventListener('click', resetGrid);
