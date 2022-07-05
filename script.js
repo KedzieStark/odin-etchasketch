@@ -31,18 +31,18 @@ function clearGrid() {
 }
 
 function gridResize() {
-    let gridSize = prompt("Enter a grid size","16");
+    let gridSize = parseInt(prompt("Enter a grid size","16"));
+    while (isNaN(gridSize) || (gridSize <= 0) || (gridSize >= 100)) {
+        gridSize = parseInt(prompt("Enter a number between 1 & 100","16")); 
+    }
     container.replaceChildren();
     for (let i = 0; i < Math.pow(gridSize, 2); i++) {
         const square = document.createElement("div");
         square.classList.add("square");
         square.style.setProperty("width", `calc(${100 / gridSize}%)`);
         container.append(square);
-        //addHover();
     }
     mouseOver();
 }
-
-// 
 
 mouseOver();
