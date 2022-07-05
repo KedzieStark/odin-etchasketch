@@ -11,21 +11,23 @@ button {
 }
 
 .container {
-    max-width: 700px;
+    width: 70%;
+    max-width: 800px;
     aspect-ratio: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-content: stretch;
     flex-wrap: wrap;
     border: 5px solid #000;
 }
 
 .square {
     aspect-ratio: 1;
-    width: 6.25%;
-    height: 6.25%;
     box-sizing: border-box;
     border: 1px solid black;
+}
+
+.ini {
+    width: 6.25%;
 }
 
 .active {
