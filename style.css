@@ -1,13 +1,9 @@
 body {
-    height: 90vh;
+    height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction:column;
-}
-
-button {
-
 }
 
 .container {
@@ -17,13 +13,46 @@ button {
     display: flex;
     align-content: stretch;
     flex-wrap: wrap;
-    border: 5px solid #000;
+    border: 5px solid #21174A;
 }
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    display: inline-block;
+    margin: 10px;
+    border:none;
+    border-radius: 3px;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    text-transform:uppercase;
+    font-size: 1.5em;
+    transition-duration: 0.3s;
+    font-weight: 800;
+    color: #DF0E62;
+    background-color: #FAC70B;
+}
+
+button:last-child {
+    background-color: #DF0E62;
+    color: #FAC70B;
+}
+
+button:hover {
+    background-color: #21174A;
+    color:#fff;
+}
+
+
 
 .square {
     aspect-ratio: 1;
     box-sizing: border-box;
-    border: 1px solid black;
+    border: 1px solid #21174A;
+    background-color: #fff;
 }
 
 .ini {
@@ -31,6 +60,6 @@ button {
 }
 
 .active {
-    background-color: #3a3a3a;
+    background-color: #127681;
     transition: 0.15s;
 }
